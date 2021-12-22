@@ -1,0 +1,2 @@
+INSERT INTO SUPER_CATEGORY (id,name) VALUES (NEXTVAL('HIBERNATE_SEQUENCE'),'Electronic');
+INSERT INTO Category (id,name,super_category_id) VALUES (NEXTVAL('HIBERNATE_SEQUENCE'),'Phone', 1);
