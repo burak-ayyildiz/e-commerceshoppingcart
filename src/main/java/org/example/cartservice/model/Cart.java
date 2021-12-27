@@ -2,10 +2,7 @@ package org.example.cartservice.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Data
@@ -15,8 +12,8 @@ public class Cart {
     @GeneratedValue
     private Long id;
 
-    @OneToMany
-    private List<Product> products;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<CartItem> cartItems;
 
 
 

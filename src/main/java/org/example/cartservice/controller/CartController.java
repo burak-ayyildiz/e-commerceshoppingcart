@@ -15,9 +15,10 @@ public class CartController {
         this.cartService = cartService;
     }
     @PostMapping
-    public void post(@RequestBody Cart cart){
-        cartService.save(cart);
+    public Cart post(@RequestBody Cart cart){
+        return cartService.save(cart);
     }
+
     @GetMapping
     @RequestMapping("{id}")
     public Cart getById(@PathVariable Long id){

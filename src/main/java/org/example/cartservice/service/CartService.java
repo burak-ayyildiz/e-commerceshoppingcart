@@ -12,8 +12,8 @@ public class CartService {
         this.cartRepository = cartRepository;
     }
 
-    public void save(Cart cart) {
-        cartRepository.save(cart);
+    public Cart save(Cart cart) {
+        return cartRepository.save(cart);
     }
 
     public Cart getById(Long id) {
