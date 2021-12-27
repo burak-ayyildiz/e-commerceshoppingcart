@@ -26,8 +26,8 @@ public class ProductController {
     }
 
     @PostMapping
-    public void create(@RequestBody Product product) {
-        service.save(product);
+    public void create(@RequestBody ProductDTO productDTO) {
+        service.save(productDTO);
     }
 
     @GetMapping
@@ -37,7 +37,7 @@ public class ProductController {
 
     @GetMapping
     @RequestMapping("{id}")
-    public Product getById(@PathVariable Long id) {
+    public ProductDTO getById(@PathVariable Long id) {
         return service.getById(id);
     }
 
