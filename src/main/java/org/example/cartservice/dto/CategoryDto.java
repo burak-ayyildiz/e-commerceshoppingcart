@@ -1,3 +1,4 @@
+/*
 package org.example.cartservice.dto;
 
 import lombok.Data;
@@ -15,3 +16,4 @@ public class CategoryDto {
     private SuperCategoryDto superCategory;
 
 }
+*/

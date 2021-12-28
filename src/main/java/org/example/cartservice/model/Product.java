@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-
+@Data
 @Entity
 public class Product {
 
@@ -20,35 +20,15 @@ public class Product {
     @OneToOne
     private Category category;
 
-    public Long getId() {
-        return id;
+    public ProductDTO convertTo() {
+
+        return new ProductDTO(this.id, this.name, this.price);
+
+//        return ProductDTO.ProductDTOBuilder.aProductDTO()
+//                .id(this.id)
+//                .price(this.price)
+//                .name(this.name)
+//                .build();
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
 }

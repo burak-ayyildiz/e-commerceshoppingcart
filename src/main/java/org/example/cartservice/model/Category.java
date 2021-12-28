@@ -16,7 +16,7 @@ public class Category {
     @GeneratedValue
     private Long id;
     private String name;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     private SuperCategory superCategory;
 
 }
